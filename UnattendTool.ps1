@@ -261,11 +261,11 @@ function ShowWindowsProductNameSelect {
     Write-Host -Object '选择要安装系统的产品，推荐 1' -ForegroundColor Green
     Write-Host -Object '============================'
     Write-Host -Object ''
-    Write-Host -Object '1: 企业版 Enterprise' -ForegroundColor Green
+    Write-Host -Object '1: 专业版 Pro' -ForegroundColor Green
     Write-Host -Object ''
     Write-Host -Object '2: 教育版 Education'
     Write-Host -Object ''
-    Write-Host -Object '3: 专业版 Pro'
+    Write-Host -Object '3: 企业版 Enterprise'
     Write-Host -Object ''
     Write-Host -Object '4: 专业教育版 Pro Education'
     Write-Host -Object ''
@@ -278,7 +278,7 @@ function ShowWindowsProductNameSelect {
         $InputOption = Read-Host -Prompt '请输入选择的序号(默认为 1)，按回车键确认'
         if ($InputOption -ieq '' -or $InputOption -ieq '1') {
             Write-Host -Object ''
-            return 'Enterprise'
+            return 'Pro'
         }
         elseif ($InputOption -ieq '2') {
             Write-Host -Object ''
@@ -286,7 +286,7 @@ function ShowWindowsProductNameSelect {
         }
         elseif ($InputOption -ieq '3') {
             Write-Host -Object ''
-            return 'Pro'
+            return 'Enterprise'
         }
         elseif ($InputOption -ieq '4') {
             Write-Host -Object ''
